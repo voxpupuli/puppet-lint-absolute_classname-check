@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name        = 'puppet-lint-absolute_class-check'
+  spec.name        = 'puppet-lint-absolute_classname-check'
   spec.version     = '0.1.0'
   spec.homepage    = 'https://github.com/camptocamp/puppet-lint-absolute_classname-check'
   spec.license     = 'Apache-2.0'
