@@ -4,6 +4,7 @@ PuppetLint.new_check(:relative_classname_inclusion) do
       if token.type == :NAME && token.value == 'include'
         s = token.next_code_token
         while ![:NEWLINE, :RBRACK].include? s.type
+          break if s.next_code_token.type == :LPAREN # Function
           if (s.type == :NAME || s.type == :SSTRING) && s.value !~ /^::/
             notify :warning, {
               :message => 'class included by relative name',

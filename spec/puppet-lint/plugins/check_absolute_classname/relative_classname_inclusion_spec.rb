@@ -9,6 +9,8 @@ describe 'relative_classname_inclusion' do
         <<-EOS
         include ::foobar
         include('::foobar')
+        include(foobar(baz))
+        include(foobar('baz'))
 
         class { '::foobar': }
 
@@ -57,6 +59,8 @@ describe 'relative_classname_inclusion' do
         <<-EOS
         include ::foobar
         include('::foobar')
+        include(foobar(baz))
+        include(foobar('baz'))
 
         class { '::foobar': }
 
