@@ -1,5 +1,3 @@
-require 'pp'
-
 PuppetLint.new_check(:relative_classname_inclusion) do
   def check
     tokens.each_with_index do |token, token_idx|
@@ -16,7 +14,7 @@ PuppetLint.new_check(:relative_classname_inclusion) do
           end
           s = s.next_token
         end
-      elsif token.type == :CLASS
+      elsif token.type == :CLASS and token.next_code_token.type == :LBRACE
         s = token.next_code_token
         while s.type != :COLON
           if (s.type == :NAME || s.type == :SSTRING) && s.value !~ /^::/

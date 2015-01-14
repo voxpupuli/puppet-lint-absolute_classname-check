@@ -11,6 +11,9 @@ describe 'relative_classname_inclusion' do
         include('::foobar')
 
         class { '::foobar': }
+
+        class foobar {
+        }
         EOS
       end
 
@@ -56,6 +59,9 @@ describe 'relative_classname_inclusion' do
         include('::foobar')
 
         class { '::foobar': }
+
+        class foobar {
+        }
         EOS
       end
 
