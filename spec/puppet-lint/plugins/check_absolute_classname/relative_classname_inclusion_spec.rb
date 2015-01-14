@@ -12,6 +12,9 @@ describe 'relative_classname_inclusion' do
         include(foobar(baz))
         include(foobar('baz'))
 
+        include ::foo, ::bar
+        include('::foo', '::bar')
+
         class { '::foobar': }
 
         class foobar {
@@ -61,6 +64,9 @@ describe 'relative_classname_inclusion' do
         include('::foobar')
         include(foobar(baz))
         include(foobar('baz'))
+
+        include ::foo, ::bar
+        include('::foo', '::bar')
 
         class { '::foobar': }
 
