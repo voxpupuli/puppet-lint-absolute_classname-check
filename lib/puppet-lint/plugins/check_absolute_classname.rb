@@ -5,10 +5,11 @@ PuppetLint.new_check(:relative_classname_inclusion) do
         s = token.next_code_token
         in_function = 0
         while s.type != :NEWLINE
+          n = s.next_code_token
           if s.type == :NAME || s.type == :SSTRING
-            if s.next_code_token.type == :LPAREN
+            if n && n.type == :LPAREN
               in_function += 1
-            elsif in_function > 0 && s.next_code_token.type == :RPAREN
+            elsif in_function > 0 && n && n.type == :RPAREN
               in_function -= 1
             elsif in_function == 0 && s.value !~ /^::/
               notify :warning, {
