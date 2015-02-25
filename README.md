@@ -9,6 +9,19 @@ puppet-lint-absolute_classname-check
 
 A puppet-lint plugin to check that classes are included by their absolute name.
 
+## Installing
+
+### From the command line
+
+```shell
+$ gem install puppet-lint-absolute_classname-check
+```
+
+### In a Gemfile
+
+```ruby
+gem 'puppet-lint-absolute_classname-check', :require => false
+```
 
 ## Checks
 
