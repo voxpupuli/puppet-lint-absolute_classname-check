@@ -1,5 +1,5 @@
 puppet-lint-absolute_classname-check
-=================================
+====================================
 
 [![Build Status](https://img.shields.io/travis/puppet-community/puppet-lint-absolute_classname-check.svg)](https://travis-ci.org/puppet-community/puppet-lint-absolute_classname-check)
 [![Gem Version](https://img.shields.io/gem/v/puppet-lint-absolute_classname-check.svg)](https://rubygems.org/gems/puppet-lint-absolute_classname-check)
@@ -40,3 +40,11 @@ Alternatively, if you’re calling puppet-lint via the Rake task, you should ins
 ```ruby
 PuppetLint.configuration.send('disable_absolute_classname')
 ```
+
+## Transfer Notice
+
+This plugin was originally authored by [Camptocamp](http://www.camptocamp.com).
+The maintainer preferred that Puppet Community take ownership of the module for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here instead of Camptocamp.
+
+Previously: https://github.com/camptocamp/puppet-lint-absolute_classname-check
