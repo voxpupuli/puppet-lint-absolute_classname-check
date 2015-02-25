@@ -1,10 +1,10 @@
 puppet-lint-absolute_classname-check
 =================================
 
-[![Build Status](https://travis-ci.org/camptocamp/puppet-lint-absolute_classname-check.svg)](https://travis-ci.org/camptocamp/puppet-lint-absolute_classname-check)
-[![Code Climate](https://codeclimate.com/github/camptocamp/puppet-lint-absolute_classname-check/badges/gpa.svg)](https://codeclimate.com/github/camptocamp/puppet-lint-absolute_classname-check)
-[![Gem Version](https://badge.fury.io/rb/puppet-lint-absolute_classname-check.svg)](http://badge.fury.io/rb/puppet-lint-absolute_classname-check)
-[![Coverage Status](https://img.shields.io/coveralls/camptocamp/puppet-lint-absolute_classname-check.svg)](https://coveralls.io/r/camptocamp/puppet-lint-absolute_classname-check?branch=master)
+[![Build Status](https://img.shields.io/puppet-community/puppet-lint-absolute_classname-check.svg)](https://travis-ci.org/puppet-community/puppet-lint-absolute_classname-check)
+[![Gem Version](https://img.shields.io/gem/v/puppet-lint-absolute_classname-check.svg)](https://rubygems.org/gems/puppet-lint-absolute_classname-check)
+[![Coverage Status](https://img.shields.io/coveralls/puppet-community/puppet-lint-absolute_classname-check.svg)](https://coveralls.io/r/puppet-community/puppet-lint-absolute_classname-check?branch=master)
+[![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](http://www.camptocamp.com)
 
 A puppet-lint plugin to check that classes are included by their absolute name.
 
