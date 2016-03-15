@@ -19,6 +19,16 @@ describe 'relative_classname_inclusion' do
 
         class foobar {
         }
+
+        contain ::foobar
+        contain('::foobar')
+        contain(foobar(baz))
+        contain(foobar('baz'))
+
+        require ::foobar
+        require('::foobar')
+        require(foobar(baz))
+        require(foobar('baz'))
         EOS
       end
 
@@ -33,17 +43,25 @@ describe 'relative_classname_inclusion' do
         include foobar
         include(foobar)
         class { 'foobar': }
+        contain foobar
+        contain(foobar)
+        require foobar
+        require(foobar)
         EOS
       end
 
-      it 'should detect 3 problems' do
-        expect(problems).to have(3).problems
+      it 'should detect 7 problems' do
+        expect(problems).to have(7).problems
       end
 
       it 'should create warnings' do
         expect(problems).to contain_warning(msg).on_line(1).in_column(17)
         expect(problems).to contain_warning(msg).on_line(2).in_column(17)
         expect(problems).to contain_warning(msg).on_line(3).in_column(17)
+        expect(problems).to contain_warning(msg).on_line(4).in_column(17)
+        expect(problems).to contain_warning(msg).on_line(5).in_column(17)
+        expect(problems).to contain_warning(msg).on_line(6).in_column(17)
+        expect(problems).to contain_warning(msg).on_line(7).in_column(17)
       end
     end
   end
@@ -72,6 +90,16 @@ describe 'relative_classname_inclusion' do
 
         class foobar {
         }
+
+        contain ::foobar
+        contain('::foobar')
+        contain(foobar(baz))
+        contain(foobar('baz'))
+
+        require ::foobar
+        require('::foobar')
+        require(foobar(baz))
+        require(foobar('baz'))
         EOS
       end
 
@@ -86,17 +114,25 @@ describe 'relative_classname_inclusion' do
         include foobar
         include(foobar)
         class { 'foobar': }
+        contain foobar
+        contain(foobar)
+        require foobar
+        require(foobar)
         EOS
       end
 
-      it 'should detect 3 problems' do
-        expect(problems).to have(3).problems
+      it 'should detect 7 problems' do
+        expect(problems).to have(7).problems
       end
 
       it 'should fix the problems' do
         expect(problems).to contain_fixed(msg).on_line(1).in_column(17)
         expect(problems).to contain_fixed(msg).on_line(2).in_column(17)
         expect(problems).to contain_fixed(msg).on_line(3).in_column(17)
+        expect(problems).to contain_fixed(msg).on_line(4).in_column(17)
+        expect(problems).to contain_fixed(msg).on_line(5).in_column(17)
+        expect(problems).to contain_fixed(msg).on_line(6).in_column(17)
+        expect(problems).to contain_fixed(msg).on_line(7).in_column(17)
       end
 
       it 'should should add colons' do
@@ -105,6 +141,10 @@ describe 'relative_classname_inclusion' do
         include ::foobar
         include(::foobar)
         class { '::foobar': }
+        contain ::foobar
+        contain(::foobar)
+        require ::foobar
+        require(::foobar)
         EOS
         )
       end
