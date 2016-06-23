@@ -79,6 +79,23 @@ describe 'relative_classname_inclusion' do
         expect(problems).to have(0).problems
       end
     end
+
+    context 'when require is a hash key' do
+      let(:code) do
+        <<-EOS
+        $defaults = {
+          require => Exec['apt_update'],
+        }
+        $defaults = {
+          'require' => Exec['apt_update'],
+        }
+        EOS
+      end
+
+      it 'should detect no problems' do
+        expect(problems).to have(0).problems
+      end
+    end
   end
 
   context 'with fix enabled' do
