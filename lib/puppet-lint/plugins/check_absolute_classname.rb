@@ -2,6 +2,7 @@ PuppetLint.new_check(:relative_classname_inclusion) do
   def check
     tokens.each_with_index do |token, token_idx|
       if token.type == :NAME && ['include','contain','require'].include?(token.value)
+        next if resource_indexes.any? { |resource| resource[:tokens].include?(token) }
         s = token.next_code_token
         in_function = 0
         while s.type != :NEWLINE
