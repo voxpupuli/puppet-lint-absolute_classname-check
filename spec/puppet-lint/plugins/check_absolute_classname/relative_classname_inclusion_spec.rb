@@ -64,6 +64,21 @@ describe 'relative_classname_inclusion' do
         expect(problems).to contain_warning(msg).on_line(7).in_column(17)
       end
     end
+
+    context 'when the require metadata parameter is used' do
+      let(:code) do
+        <<-EOS
+        file { '/path':
+          ensure  => present,
+          require => Shellvar['http_proxy'],
+        }
+        EOS
+      end
+
+      it 'should detect no problems' do
+        expect(problems).to have(0).problems
+      end
+    end
   end
 
   context 'with fix enabled' do
