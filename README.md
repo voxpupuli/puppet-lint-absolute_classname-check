@@ -44,16 +44,16 @@ include ::foobar
 
 #### Disabling the check
 
-To disable this check, you can add `--no-absolute_classname-check` to your puppet-lint command line.
+To disable this check, you can add `--no-relative_classname_inclusion-check` to your puppet-lint command line.
 
 ```shell
-$ puppet-lint --no-absolute_classname-check path/to/file.pp
+$ puppet-lint --no-relative_classname_inclusion-check path/to/file.pp
 ```
 
 Alternatively, if you’re calling puppet-lint via the Rake task, you should insert the following line to your `Rakefile`.
 
 ```ruby
-PuppetLint.configuration.send('disable_absolute_classname')
+PuppetLint.configuration.send('disable_relative_classname_inclusion')
 ```
 
 ## Transfer Notice
