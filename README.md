@@ -8,7 +8,7 @@ puppet-lint-absolute_classname-check
 [![Gemnasium](https://img.shields.io/gemnasium/puppet-community/puppet-lint-absolute_classname-check.svg)](https://gemnasium.com/puppet-community/puppet-lint-absolute_classname-check)
 [![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
 
-A puppet-lint plugin to check that classes are included by their absolute name.
+A puppet-lint plugin to check that classes are included by their absolute name **in Puppet 3 only**.
 
 ## Installing
 
@@ -28,7 +28,7 @@ gem 'puppet-lint-absolute_classname-check', :require => false
 
 ### Relative class name inclusion
 
-Including a class by a relative name might lead to unexpected results.
+Including a class by a relative name might lead to unexpected results **in Puppet 3 only**. This plugin is **not** recommended for use with Puppet 4+.
 
 #### What you have done
 
