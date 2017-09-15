@@ -28,7 +28,7 @@ gem 'puppet-lint-absolute_classname-check', :require => false
 
 ### Relative class name inclusion
 
-Including a class by a relative name might lead to unexpected results.
+Including a class by a relative name might lead to unexpected results [in Puppet 3](https://docs.puppet.com/puppet/3/lang_namespaces.html#relative-name-lookup-and-incorrect-name-resolution). This plugin is **not** recommended for use with Puppet code that has dropped support for Puppet 3 (EOL 20161231).
 
 #### What you have done
 
