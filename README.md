@@ -1,11 +1,11 @@
 puppet-lint-absolute_classname-check
 ====================================
 
-[![Build Status](https://img.shields.io/travis/puppet-community/puppet-lint-absolute_classname-check.svg)](https://travis-ci.org/puppet-community/puppet-lint-absolute_classname-check)
+[![Build Status](https://img.shields.io/travis/voxpupuli/puppet-lint-absolute_classname-check.svg)](https://travis-ci.org/voxpupuli/puppet-lint-absolute_classname-check)
 [![Gem Version](https://img.shields.io/gem/v/puppet-lint-absolute_classname-check.svg)](https://rubygems.org/gems/puppet-lint-absolute_classname-check)
 [![Gem Downloads](https://img.shields.io/gem/dt/puppet-lint-absolute_classname-check.svg)](https://rubygems.org/gems/puppet-lint-absolute_classname-check)
-[![Coverage Status](https://img.shields.io/coveralls/puppet-community/puppet-lint-absolute_classname-check.svg)](https://coveralls.io/r/puppet-community/puppet-lint-absolute_classname-check?branch=master)
-[![Gemnasium](https://img.shields.io/gemnasium/puppet-community/puppet-lint-absolute_classname-check.svg)](https://gemnasium.com/puppet-community/puppet-lint-absolute_classname-check)
+[![Coverage Status](https://img.shields.io/coveralls/voxpupuli/puppet-lint-absolute_classname-check.svg)](https://coveralls.io/r/voxpupuli/puppet-lint-absolute_classname-check?branch=master)
+[![Gemnasium](https://img.shields.io/gemnasium/voxpupuli/puppet-lint-absolute_classname-check.svg)](https://gemnasium.com/voxpupuli/puppet-lint-absolute_classname-check)
 [![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
 
 A puppet-lint plugin to check that classes are included by their absolute name.
