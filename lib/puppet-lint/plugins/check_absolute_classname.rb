@@ -1,13 +1,14 @@
 PuppetLint.new_check(:relative_classname_inclusion) do
   def check
     tokens.each_with_index do |token, token_idx|
-      if token.type == :NAME && ['include','contain','require'].include?(token.value)
+      if [:NAME,:FUNCTION_NAME].include?(token.type) && ['include','contain','require'].include?(token.value)
         s = token.next_code_token
+        next if s.nil?
         next if s.type == :FARROW
         in_function = 0
         while s.type != :NEWLINE
           n = s.next_code_token
-          if s.type == :NAME || s.type == :SSTRING
+          if [:NAME, :FUNCTION_NAME, :SSTRING,].include?(s.type)
             if n && n.type == :LPAREN
               in_function += 1
             elsif in_function > 0 && n && n.type == :RPAREN

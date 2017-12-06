@@ -182,4 +182,18 @@ describe 'relative_classname_inclusion' do
       end
     end
   end
+
+  describe '(#12) behavior of lookup("foo", {merge => unique}).include' do
+    let(:msg) { '(#12) class included with lookup("foo", {merge => unique}).include' }
+
+    let(:code) do
+      <<-EOS
+      lookup(foo, {merge => unique}).include
+      EOS
+    end
+
+    it 'should not detect any problems' do
+      expect(problems).to have(0).problems
+    end
+  end
 end
