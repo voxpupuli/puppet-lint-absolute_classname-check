@@ -10,6 +10,17 @@ puppet-lint-absolute_classname-check
 
 A puppet-lint plugin to check that classes are included by their absolute name.
 
+
+## Table of contents
+
+* [Installing](#installing)
+  * [From the command line](#from-the-command-line)
+  * [In a Gemfile](#in-a-gemfile)
+* [Checks](#checks)
+  * [Relative class name inclusion](#relative-class-name-inclusion)
+* [Transfer notice](#transfer-notice)
+* [Release Informaion](#release-information)
+
 ## Installing
 
 ### From the command line
@@ -71,3 +82,13 @@ The maintainer preferred that Puppet Community take ownership of the module for 
 Existing pull requests and issues were transferred over, please fork and continue to contribute here instead of Camptocamp.
 
 Previously: https://github.com/camptocamp/puppet-lint-absolute_classname-check
+
+## Release information
+
+To make a new release, please do:
+* Update the version in the `puppet-lint-absolute_classname-check.gemspec` file
+* Update the version in the Rakefile
+* Install gems with `bundle install --with release --path .vendor`
+* generate the changelog with `bundle exec rake changelog`
+* Create a PR with it
+* After it got merged, push a tag. Travis will do the actual release
