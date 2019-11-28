@@ -38,26 +38,18 @@ gem 'puppet-lint-absolute_classname-check', :require => false
 
 ### Relative class name inclusion
 
-Including a class by a relative name might lead to unexpected results [in Puppet 3](https://docs.puppet.com/puppet/3/lang_namespaces.html#relative-name-lookup-and-incorrect-name-resolution).
+Including a class by a relative name might lead to unexpected results [in Puppet 3](https://docs.puppet.com/puppet/3/lang_namespaces.html#relative-name-lookup-and-incorrect-name-resolution). That's why a lot of manifests explicitly include by the absolute name. Since Puppet 4 names are always absolute and this is no longer needed. This lint check helps to clean up your manifests.
 
 #### What you have done
-
-```puppet
-include foobar
-```
-
-#### What you should have done
 
 ```puppet
 include ::foobar
 ```
 
-#### Reverse this check
+#### What you should have done
 
-This check can be reversed to check for Puppet > 4.
-
-```ruby
-PuppetLint.configuration.absolute_classname_reverse = true
+```puppet
+include foobar
 ```
 
 #### Disabling the check
