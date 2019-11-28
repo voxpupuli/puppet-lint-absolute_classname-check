@@ -17,6 +17,8 @@ Gem::Specification.new do |spec|
     A puppet-lint plugin to check that classes are included by their absolute name.
   EOF
 
+  spec.required_ruby_version = '>= 2.1.0'
+
   spec.add_dependency             'puppet-lint', '>= 1.0', '< 3.0'
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'mime-types'
