@@ -78,7 +78,6 @@ Previously: https://github.com/camptocamp/puppet-lint-absolute_classname-check
 
 To make a new release, please do:
 * Update the version in the `puppet-lint-absolute_classname-check.gemspec` file
-* Update the version in the Rakefile
 * Install gems with `bundle install --with release --path .vendor`
 * generate the changelog with `bundle exec rake changelog`
 * Create a PR with it
