@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v1.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/v1.0.0) (2019-02-09)
+## [2.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/2.0.0) (2019-12-06)
 
-[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/0.2.5...v1.0.0)
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/1.0.0...2.0.0)
+
+**Breaking changes:**
+
+- Drop reverse and always require Puppet 4+ style and Ruby 2.1 [\#21](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/21) ([ekohl](https://github.com/ekohl))
+
+## [1.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/1.0.0) (2019-02-09)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/0.2.5...1.0.0)
 
 **Closed issues:**
 
