@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency             'puppet-lint', '>= 1.0', '< 3.0'
   spec.add_development_dependency 'coveralls'
-  spec.add_development_dependency 'mime-types'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rspec-collection_matchers'
