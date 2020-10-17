@@ -32,11 +32,13 @@ describe 'relative_classname_inclusion' do
 
         class foobar inherits ::baz {
         }
+
+        Class['::foo'] -> Class['::bar']
         EOS
       end
 
-      it 'should detect 12 problems' do
-        expect(problems).to have(12).problems
+      it 'should detect 14 problems' do
+        expect(problems).to have(14).problems
       end
 
       it 'should create warnings' do
@@ -52,6 +54,8 @@ describe 'relative_classname_inclusion' do
         expect(problems).to contain_warning(msg).on_line(19).in_column(17)
         expect(problems).to contain_warning(msg).on_line(20).in_column(17)
         expect(problems).to contain_warning(msg).on_line(24).in_column(31)
+        expect(problems).to contain_warning(msg).on_line(27).in_column(15)
+        expect(problems).to contain_warning(msg).on_line(27).in_column(33)
       end
     end
 
@@ -67,6 +71,7 @@ describe 'relative_classname_inclusion' do
         require(foobar)
         class foobar inherits baz {
         }
+        Class['foo'] -> Class['bar']
         EOS
       end
 
@@ -145,11 +150,13 @@ describe 'relative_classname_inclusion' do
 
         class foobar inherits ::baz {
         }
+
+        Class['::foo'] -> Class['::bar']
         EOS
       end
 
-      it 'should detect 12 problems' do
-        expect(problems).to have(12).problems
+      it 'should detect 14 problems' do
+        expect(problems).to have(14).problems
       end
 
       it 'should fix the problems' do
@@ -165,6 +172,8 @@ describe 'relative_classname_inclusion' do
         expect(problems).to contain_fixed(msg).on_line(19).in_column(17)
         expect(problems).to contain_fixed(msg).on_line(20).in_column(17)
         expect(problems).to contain_fixed(msg).on_line(24).in_column(31)
+        expect(problems).to contain_fixed(msg).on_line(27).in_column(15)
+        expect(problems).to contain_fixed(msg).on_line(27).in_column(33)
       end
 
       it 'should should remove colons' do
@@ -195,6 +204,8 @@ describe 'relative_classname_inclusion' do
 
         class foobar inherits baz {
         }
+
+        Class['foo'] -> Class['bar']
         EOS
         )
       end
@@ -212,6 +223,7 @@ describe 'relative_classname_inclusion' do
         require(foobar)
         class foobar inherits baz {
         }
+        Class['foo'] -> Class['bar']
         EOS
       end
 
