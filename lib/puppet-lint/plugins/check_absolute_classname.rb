@@ -40,6 +40,16 @@ PuppetLint.new_check(:relative_classname_inclusion) do
           end
           s = s.next_token
         end
+      elsif token.type == :INHERITS
+        s = token.next_code_token
+        if s.type == :NAME && s.value.start_with?('::')
+          notify :warning, {
+            message: message,
+            line: s.line,
+            column: s.column,
+            token: s
+          }
+        end
       end
     end
   end
