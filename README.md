@@ -17,6 +17,7 @@ A puppet-lint plugin to check that classes are included by their absolute name.
   * [In a Gemfile](#in-a-gemfile)
 * [Checks](#checks)
   * [Relative class name inclusion](#relative-class-name-inclusion)
+  * [Relative class reference](#relative-classname-reference)
 * [Transfer notice](#transfer-notice)
 * [Release Informaion](#release-information)
 
@@ -64,6 +65,34 @@ Alternatively, if you’re calling puppet-lint via the Rake task, you should ins
 
 ```ruby
 PuppetLint.configuration.send('disable_relative_classname_inclusion')
+```
+
+### Relative class reference
+
+#### What you have done
+
+```puppet
+Class['::foo'] -> Class['::bar']
+```
+
+#### What you should have done
+
+```puppet
+Class['foo'] -> Class['bar']
+```
+
+#### Disabling the check
+
+To disable this check, you can add `--no-relative_classname_reference-check` to your puppet-lint command line.
+
+```shell
+$ puppet-lint --no-relative_classname_reference-check path/to/file.pp
+```
+
+Alternatively, if you’re calling puppet-lint via the Rake task, you should insert the following line to your `Rakefile`.
+
+```ruby
+PuppetLint.configuration.send('disable_relative_classname_reference')
 ```
 
 ## Transfer Notice
