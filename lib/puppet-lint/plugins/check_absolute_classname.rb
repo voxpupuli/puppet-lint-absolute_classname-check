@@ -50,19 +50,6 @@ PuppetLint.new_check(:relative_classname_inclusion) do
             token: s
           }
         end
-      elsif token.type == :TYPE and token.value == 'Class' and token.next_code_token.type == :LBRACK
-        s = token.next_code_token
-        while s.type != :RBRACK
-          if s.type == :SSTRING && s.value.start_with?('::')
-            notify :warning, {
-              message: message,
-              line: s.line,
-              column: s.column,
-              token: s
-            }
-          end
-          s = s.next_token
-        end
       end
     end
   end
