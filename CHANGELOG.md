@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/3.0.0) (2020-10-24)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/2.0.0...3.0.0)
+
+**Breaking changes:**
+
+- Add support for inherits and class references [\#23](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/23) ([bodgit](https://github.com/bodgit))
+
+**Closed issues:**
+
+- Check should also work with `inherits` [\#20](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/issues/20)
+
 ## [2.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/2.0.0) (2019-12-06)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/1.0.0...2.0.0)
@@ -33,7 +45,6 @@ All notable changes to this project will be documented in this file.
 
 **Merged pull requests:**
 
-- Release 0.2.5 [\#16](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/16) ([alexjfisher](https://github.com/alexjfisher))
 - Fix badges [\#15](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/15) ([alexjfisher](https://github.com/alexjfisher))
 - \(\#12\) Fix undefined method type with lookup\(foo\).include [\#14](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/14) ([jeffmccune](https://github.com/jeffmccune))
 - Warn about usage with Puppet 4+ [\#13](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/13) ([rnelson0](https://github.com/rnelson0))
@@ -65,16 +76,11 @@ All notable changes to this project will be documented in this file.
 
 **Merged pull requests:**
 
-- release 0.2.2 [\#8](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/8) ([bastelfreak](https://github.com/bastelfreak))
 - Ignore 'require' function name appearing in resource parameters [\#7](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/7) ([domcleal](https://github.com/domcleal))
 
 ## [0.2.1](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/0.2.1) (2016-06-22)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/0.2.0...0.2.1)
-
-**Merged pull requests:**
-
-- Release 0.2.1 [\#5](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/5) ([bastelfreak](https://github.com/bastelfreak))
 
 ## [0.2.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/0.2.0) (2016-06-22)
 
