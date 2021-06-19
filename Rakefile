@@ -10,7 +10,7 @@ begin
 
   GitHubChangelogGenerator::RakeTask.new :changelog do |config|
     config.header = "# Changelog\n\nAll notable changes to this project will be documented in this file."
-    config.exclude_labels = %w{duplicate question invalid wontfix wont-fix skip-changelog}
+    config.exclude_labels = %w{duplicate question invalid wontfix wont-fix skip-changelog modulesync}
     config.user = 'voxpupuli'
     config.project = 'puppet-lint-absolute_classname-check'
     config.future_release = Gem::Specification.load("#{config.project}.gemspec").version
