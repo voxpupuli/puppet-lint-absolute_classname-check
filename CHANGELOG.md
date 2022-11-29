@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.1](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/3.0.1) (2021-06-18)
+## [3.1.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/3.1.0) (2022-11-29)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/3.0.1...3.1.0)
+
+**Implemented enhancements:**
+
+- puppet-lint: Allow 3.x [\#31](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/31) ([bastelfreak](https://github.com/bastelfreak))
+
+## [3.0.1](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/3.0.1) (2021-06-19)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/3.0.0...3.0.1)
 
