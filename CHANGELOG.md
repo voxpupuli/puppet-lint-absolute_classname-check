@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/4.0.0) (2023-04-21)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/3.1.0...4.0.0)
+
+**Breaking changes:**
+
+- Drop Ruby \< 2.7; Add RuboCop [\#34](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/34) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.1.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/3.1.0) (2022-11-29)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/3.0.1...3.1.0)
