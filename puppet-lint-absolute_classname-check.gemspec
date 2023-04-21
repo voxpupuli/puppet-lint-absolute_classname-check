@@ -11,7 +11,6 @@ Gem::Specification.new do |spec|
     'lib/**/*',
     'spec/**/*',
   ]
-  spec.test_files  = Dir['spec/**/*']
   spec.summary     = 'A puppet-lint plugin to check that classes are not included or referenced by their absolute name.'
   spec.description = <<-EOF
     A puppet-lint plugin to check that classes are not included or referenced by their absolute name.

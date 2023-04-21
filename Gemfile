@@ -19,7 +19,3 @@ group :development do
   gem 'rspec-its', '~> 1.3'
   gem 'voxpupuli-rubocop', '~> 1.1'
 end
-
-group :development do
-  gem 'voxpupuli-rubocop', '~> 1.1'
-end

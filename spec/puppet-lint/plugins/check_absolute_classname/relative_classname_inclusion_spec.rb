@@ -35,11 +35,11 @@ describe 'relative_classname_inclusion' do
         EOS
       end
 
-      it 'should detect 12 problems' do
+      it 'detects 12 problems' do
         expect(problems).to have(12).problems
       end
 
-      it 'should create warnings' do
+      it 'creates warnings' do
         expect(problems).to contain_warning(msg).on_line(1).in_column(17)
         expect(problems).to contain_warning(msg).on_line(2).in_column(17)
         expect(problems).to contain_warning(msg).on_line(6).in_column(17)
@@ -70,7 +70,7 @@ describe 'relative_classname_inclusion' do
         EOS
       end
 
-      it 'should not detect a problem' do
+      it 'does not detect a problem' do
         expect(problems).to have(0).problems
       end
     end
@@ -85,7 +85,7 @@ describe 'relative_classname_inclusion' do
         EOS
       end
 
-      it 'should detect no problems' do
+      it 'detects no problems' do
         expect(problems).to have(0).problems
       end
     end
@@ -102,7 +102,7 @@ describe 'relative_classname_inclusion' do
         EOS
       end
 
-      it 'should detect no problems' do
+      it 'detects no problems' do
         expect(problems).to have(0).problems
       end
     end
@@ -148,11 +148,11 @@ describe 'relative_classname_inclusion' do
         EOS
       end
 
-      it 'should detect 12 problems' do
+      it 'detects 12 problems' do
         expect(problems).to have(12).problems
       end
 
-      it 'should fix the problems' do
+      it 'fixes the problems' do
         expect(problems).to contain_fixed(msg).on_line(1).in_column(17)
         expect(problems).to contain_fixed(msg).on_line(2).in_column(17)
         expect(problems).to contain_fixed(msg).on_line(6).in_column(17)
@@ -167,9 +167,9 @@ describe 'relative_classname_inclusion' do
         expect(problems).to contain_fixed(msg).on_line(24).in_column(31)
       end
 
-      it 'should should remove colons' do
+      it 'shoulds remove colons' do
         expect(manifest).to eq(
-        <<-EOS
+          <<-EOS,
         include foobar
         include('foobar')
         include(foobar(baz))
@@ -215,7 +215,7 @@ describe 'relative_classname_inclusion' do
         EOS
       end
 
-      it 'should not detect any problems' do
+      it 'does not detect any problems' do
         expect(problems).to have(0).problems
       end
     end
@@ -230,7 +230,7 @@ describe 'relative_classname_inclusion' do
       EOS
     end
 
-    it 'should not detect any problems' do
+    it 'does not detect any problems' do
       expect(problems).to have(0).problems
     end
   end
