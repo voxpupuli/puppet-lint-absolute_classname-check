@@ -21,11 +21,11 @@ describe 'relative_classname_reference' do
         EOS
       end
 
-      it 'should detect 6 problems' do
+      it 'detects 6 problems' do
         expect(problems).to have(6).problems
       end
 
-      it 'should create warnings' do
+      it 'creates warnings' do
         expect(problems).to contain_warning(msg).on_line(1).in_column(15)
         expect(problems).to contain_warning(msg).on_line(1).in_column(31)
         expect(problems).to contain_warning(msg).on_line(5).in_column(28)
@@ -50,7 +50,7 @@ describe 'relative_classname_reference' do
         EOS
       end
 
-      it 'should not detect a problem' do
+      it 'does not detect a problem' do
         expect(problems).to have(0).problems
       end
     end
@@ -82,11 +82,11 @@ describe 'relative_classname_reference' do
         EOS
       end
 
-      it 'should detect 6 problems' do
+      it 'detects 6 problems' do
         expect(problems).to have(6).problems
       end
 
-      it 'should fix the problems' do
+      it 'fixes the problems' do
         expect(problems).to contain_fixed(msg).on_line(1).in_column(15)
         expect(problems).to contain_fixed(msg).on_line(1).in_column(31)
         expect(problems).to contain_fixed(msg).on_line(5).in_column(28)
@@ -95,9 +95,9 @@ describe 'relative_classname_reference' do
         expect(problems).to contain_fixed(msg).on_line(10).in_column(43)
       end
 
-      it 'should should remove colons' do
+      it 'shoulds remove colons' do
         expect(manifest).to eq(
-        <<-EOS
+          <<-EOS,
         Class[foo] -> Class['bar']
 
         file { '/path':
@@ -129,7 +129,7 @@ describe 'relative_classname_reference' do
         EOS
       end
 
-      it 'should not detect any problems' do
+      it 'does not detect any problems' do
         expect(problems).to have(0).problems
       end
     end
