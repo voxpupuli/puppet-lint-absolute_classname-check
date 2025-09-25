@@ -7,7 +7,7 @@ PuppetLint.new_check(:relative_classname_reference) do
 
       s = token.next_code_token
       while s.type != :RBRACK
-        if (s.type == :NAME || s.type == :SSTRING) && s.value.start_with?('::')
+        if %i[NAME SSTRING].include?(s.type) && s.value.start_with?('::')
           notify :warning, {
             message: message,
             line: s.line,
