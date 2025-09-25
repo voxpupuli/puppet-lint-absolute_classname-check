@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/5.0.0) (2025-09-25)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/4.0.0...5.0.0)
+
+**Breaking changes:**
+
+- Require Ruby 3.2+ & puppet-lint 5.1+ [\#41](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/41) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Bump actions/checkout from 3 to 4 [\#37](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/37) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update voxpupuli-rubocop requirement from ~\> 1.1 to ~\> 2.0 [\#36](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/pull/36) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [4.0.0](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/tree/4.0.0) (2023-04-21)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-absolute_classname-check/compare/3.1.0...4.0.0)
