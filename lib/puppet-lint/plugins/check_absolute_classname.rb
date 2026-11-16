@@ -9,7 +9,7 @@ PuppetLint.new_check(:relative_classname_inclusion) do
         next if s.type == :FARROW
 
         in_function = 0
-        while s.type != :NEWLINE
+        while s && s.type != :NEWLINE
           n = s.next_code_token
           if %i[NAME FUNCTION_NAME SSTRING].include?(s.type)
             if n && n.type == :LPAREN
