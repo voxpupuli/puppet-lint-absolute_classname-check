@@ -221,6 +221,19 @@ describe 'relative_classname_inclusion' do
     end
   end
 
+  context 'when the manifest does not end with a newline' do
+    let(:code) { "class foo {\n  include ::foobar\n}\ninclude ::foobar" }
+
+    it 'detects 2 problems' do
+      expect(problems).to have(2).problems
+    end
+
+    it 'creates warnings' do
+      expect(problems).to contain_warning(msg).on_line(2).in_column(11)
+      expect(problems).to contain_warning(msg).on_line(4).in_column(9)
+    end
+  end
+
   describe '(#12) behavior of lookup("foo", {merge => unique}).include' do
     let(:msg) { '(#12) class included with lookup("foo", {merge => unique}).include' }
 
